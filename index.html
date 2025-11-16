@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tufail AI TTS</title>
+</head>
+<body>
+    <h2>Tufail AI Text to Speech</h2>
+    <textarea id="text" rows="6" cols="30" placeholder="Type your text here..."></textarea><br><br>
+    <button onclick="speak()">Convert to Voice</button>
+
+    <script>
+        function speak() {
+            const text = document.getElementById("text").value;
+            const speech = new SpeechSynthesisUtterance(text);
+            speech.lang = "en-US";
+            window.speechSynthesis.speak(speech);
+        }
+    </script>
+</body>
+</html>
